@@ -54,14 +54,15 @@ const randChoice = (arr) => {
 for (let i = 0; i<20; i++) {
     const randomGender = randChoice(genders);
 
-    let name ;
+    const name = randChoice(randomGender === 'M' ? maleNames : femaleNames);
 
+    /*let name ;
     if(randomGender === 'M') {
         name = randChoice(maleNames);
     }
     else {
         name = randChoice(femaleNames);
-    }
+    }*/
 
     const person = {
         gender: randomGender,
