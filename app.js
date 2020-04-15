@@ -56,14 +56,6 @@ for (let i = 0; i<20; i++) {
 
     const name = randChoice(randomGender === 'M' ? maleNames : femaleNames);
 
-    /*let name ;
-    if(randomGender === 'M') {
-        name = randChoice(maleNames);
-    }
-    else {
-        name = randChoice(femaleNames);
-    }*/
-
     const person = {
         gender: randomGender,
         firstName: name,
@@ -76,7 +68,7 @@ for (let i = 0; i<20; i++) {
     console.log('people', people);
 }
 
-const data = JSON.stringify(people);
+const data = JSON.stringify(people, null, 2);
 
 fs.writeFile('people.json', data, (err) => {
     if (err) throw err;
