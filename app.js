@@ -67,7 +67,7 @@ for (let i = 0; i<20; i++) {
         gender: randomGender,
         firstName: name,
         lastName: randChoice(lastNames),
-        age: Math.floor(Math.random()*100),
+        age: Math.floor(Math.random() * 61 ) + 18,
         telephone: `+48${Math.floor(100000000 + Math.random() * 900000000)}`,
     };
 
